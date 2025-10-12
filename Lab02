@@ -1,0 +1,224 @@
+syimykr@DESKTOP-4JPUDVN:~$ sudo nano/usr/local/bin/system_info
+[sudo] password for syimykr:
+sudo: nano/usr/local/bin/system_info: command not found
+syimykr@DESKTOP-4JPUDVN:~$ ls
+another_dir  dir1  dir2  my_dir  savedjson.json
+syimykr@DESKTOP-4JPUDVN:~$ sudo nano /usr/local/bin/system_info
+syimykr@DESKTOP-4JPUDVN:~$ sudo chmod +x /usr/local/bin/system_info
+syimykr@DESKTOP-4JPUDVN:~$ system_info
+Hostname: DESKTOP-4JPUDVN
+Current User: syimykr
+Disk Space: Filesystem      Size  Used Avail Use% Mounted on
+/dev/sdd       1007G  1.3G  955G   1% /
+rootfs          1.8G  2.7M  1.8G   1% /init
+none            1.8G     0  1.8G   0% /dev/shm
+none            1.8G  556K  1.8G   1% /run
+none            1.8G     0  1.8G   0% /run/lock
+none            1.8G   76K  1.8G   1% /run/user
+drivers         477G  265G  213G  56% /usr/lib/wsl/drivers
+none            1.8G     0  1.8G   0% /usr/lib/wsl/lib
+none            1.8G  4.0K  1.8G   1% /mnt/wsl
+none            1.8G   76K  1.8G   1% /mnt/wslg/versions.txt
+none            1.8G   76K  1.8G   1% /mnt/wslg/doc
+none            1.8G     0  1.8G   0% /usr/lib/modules/6.6.87.2-microsoft-standard-WSL2
+C:\             477G  265G  213G  56% /mnt/c
+tmpfs           360M   20K  360M   1% /run/user/1000
+tmpfs           360M   20K  360M   1% /run/user/0
+syimykr@DESKTOP-4JPUDVN:~$ nano greet.sh
+syimykr@DESKTOP-4JPUDVN:~$ greet.sh
+greet.sh: command not found
+syimykr@DESKTOP-4JPUDVN:~$ ./greet.sh
+-bash: ./greet.sh: Permission denied
+syimykr@DESKTOP-4JPUDVN:~$ chmod +x greet.sh
+syimykr@DESKTOP-4JPUDVN:~$ greet.sh
+greet.sh: command not found
+syimykr@DESKTOP-4JPUDVN:~$ ./greet.sh
+Hello,syimykr!
+syimykr@DESKTOP-4JPUDVN:~$ nanot greet.sh
+Command 'nanot' not found, did you mean:
+  command 'nano' from snap nano (7.2+pkg-4057)
+  command 'nano' from deb nano (7.2-2ubuntu0.1)
+See 'snap info <snapname>' for additional versions.
+syimykr@DESKTOP-4JPUDVN:~$ nano greet.sh
+syimykr@DESKTOP-4JPUDVN:~$ ./greet.sh
+Hello,syimykr!
+syimykr@DESKTOP-4JPUDVN:~$ nano current_time.sh
+syimykr@DESKTOP-4JPUDVN:~$ chmod +x current_time.sh
+syimykr@DESKTOP-4JPUDVN:~$ ./current_time.sh
+Current time: 15:45. Work day ends after 2 hours and 15 minutes.
+syimykr@DESKTOP-4JPUDVN:~$ nano count_words.sh
+syimykr@DESKTOP-4JPUDVN:~$ chmod +x count_words.sh
+syimykr@DESKTOP-4JPUDVN:~$ ./count_words.sh
+Usage: ./count_words.sh <filename> <word>
+syimykr@DESKTOP-4JPUDVN:~$ touch word_file.txt
+syimykr@DESKTOP-4JPUDVN:~$ chmod 777 word_file.txt
+syimykr@DESKTOP-4JPUDVN:~$ echo "Lab 2. Custom UNIX-based commands
+
+
+Custo>
+>
+> Custom commands in the Unix terminal are user-defined shortcuts or scripts that perform specific tasks. They enhance productivity by automating repetitive actions or combining multiple commands into one.
+>
+> We are going to create a custom command that will display system information using existing UNIX-based commands.
+>
+> Create file with command:
+>
+> sudo nano /usr/local/bin/system_info
+>
+> And paste the following code:
+>
+> #!/bin/bash
+ "Hostname: $(hostname)"
+echo "Current User: $(whoami)"
+echo "Disk Space: $(df -h)"
+
+
+Make it executable:
+
+sudo chmod +x /usr/local/bin/system_info
+
+Test it:
+
+system_info
+
+
+
+Following these principles you should create 4 small study projects. The following UNIX commands are preferred to know in prior:
+
+date, echo, cp, ls, mkdir, whoami, rm, mv,-bash: !/bin/bash: event not found
+ top, dh> echo "Hostname: $(hostname)"
+> echo "Current User: $(whoami)"
+> echo "Disk Space: $(df -h)"
+>
+>
+> Make it executable:
+>
+> sudo chmod +x /usr/local/bin/system_info
+>
+> Test it:
+>
+> system_info
+>
+>
+>
+> Following these principles you should create 4 small study projects. The following UNIX commands are preferred to know in prior:
+>
+> date, echo, cp, ls, mkdir, whoami, rm, mv, top, dh
+>
+> If you struggle with writing reliable scripts, please don’t hesitate to google and understand commands that you might need!
+e a scri>
+>  Create a script to display a greeting
+>
+> Write a shell script named greet.sh that:
+utputs a> Outputs a greeting message, e.g., "Hello, [username]!"
+te a scr>
+> Create a script that displays time remaining before work day ends
+>
+> Write a shell script named current_time.sh that:
+> Displays the current time and time remaining before work day ends.
+> E.g. Current time: 13:30. Work day ends after 4 hours and 30 minutes.
+>
+>
+>
+> Create a script to count word occurrences in a file
+>
+> Write a shell script named count_word.sh that:
+akes two> Takes two arguments: a file name and a word to search for.
+> Counts and displays how many times the specified word appears in the file.
+
+Create>
+>
+> Create a Script to find and delete empty files
+>
+> Write a shell script named delete_empty_files.sh that:
+akes a d> Takes a directory as an argument.
+> Finds all empty files in that directory and deletes them.
+> The script should print the names of deleted files.
+>
+>
+> " > word_file.txt
+syimykr@DESKTOP-4JPUDVN:~$ cat word_file.txt
+Lab 2. Custom UNIX-based commands
+
+
+Custom commands in the Unix terminal are user-defined shortcuts or scripts that perform specific tasks. They enhance productivity by automating repetitive actions or combining multiple commands into one.
+
+We are going to create a custom command that will display system information using existing UNIX-based commands.
+
+Create file with command:
+
+sudo nano /usr/local/bin/system_info
+
+And paste the following code:
+
+echo Hostname: DESKTOP-4JPUDVN
+echo Current User: syimykr
+echo Disk Space: Filesystem Size Used Avail Use% Mounted on /dev/sdd 1007G 1.3G 955G 1% / rootfs 1.8G 2.7M 1.8G 1% /init none 1.8G 0 1.8G 0% /dev/shm none 1.8G 556K 1.8G 1% /run none 1.8G 0 1.8G 0% /run/lock none 1.8G 76K 1.8G 1% /run/user drivers 477G 264G 213G 56% /usr/lib/wsl/drivers none 1.8G 0 1.8G 0% /usr/lib/wsl/lib none 1.8G 4.0K 1.8G 1% /mnt/wsl none 1.8G 76K 1.8G 1% /mnt/wslg/versions.txt none 1.8G 76K 1.8G 1% /mnt/wslg/doc none 1.8G 0 1.8G 0% /usr/lib/modules/6.6.87.2-microsoft-standard-WSL2 C:\ 477G 264G 213G 56% /mnt/c tmpfs 360M 20K 360M 1% /run/user/1000 tmpfs 360M 20K 360M 1% /run/user/0
+
+
+Make it executable:
+
+sudo chmod +x /usr/local/bin/system_info
+
+Test it:
+
+system_info
+
+
+
+Following these principles you should create 4 small study projects. The following UNIX commands are preferred to know in prior:
+
+date, echo, cp, ls, mkdir, whoami, rm, mv, top, dh
+
+If you struggle with writing reliable scripts, please don’t hesitate to google and understand commands that you might need!
+
+ Create a script to display a greeting
+
+Write a shell script named greet.sh that:
+Outputs a greeting message, e.g., Hello, [username]!
+
+Create a script that displays time remaining before work day ends
+
+Write a shell script named current_time.sh that:
+Displays the current time and time remaining before work day ends.
+E.g. Current time: 13:30. Work day ends after 4 hours and 30 minutes.
+
+
+
+Create a script to count word occurrences in a file
+
+Write a shell script named count_word.sh that:
+Takes two arguments: a file name and a word to search for.
+Counts and displays how many times the specified word appears in the file.
+
+
+Create a Script to find and delete empty files
+
+Write a shell script named delete_empty_files.sh that:
+Takes a directory as an argument.
+Finds all empty files in that directory and deletes them.
+The script should print the names of deleted files.
+
+
+
+syimykr@DESKTOP-4JPUDVN:~$ ./count_words.sh word_file.txt create
+The word 'create' appears 2 times in 'word_file.txt'.
+syimykr@DESKTOP-4JPUDVN:~$ ./count_words.sh word_file.txt Create
+The word 'Create' appears 5 times in 'word_file.txt'.
+syimykr@DESKTOP-4JPUDVN:~$ nano delete_empty_files.sh
+syimykr@DESKTOP-4JPUDVN:~$ nano count_words.sh
+syimykr@DESKTOP-4JPUDVN:~$ nano delete_empty_files.sh
+syimykr@DESKTOP-4JPUDVN:~$ mkdir files_to_delete
+syimykr@DESKTOP-4JPUDVN:~$ cd files_to_delete/
+syimykr@DESKTOP-4JPUDVN:~/files_to_delete$ touch file1.txt
+syimykr@DESKTOP-4JPUDVN:~/files_to_delete$ file2.txt
+file2.txt: command not found
+syimykr@DESKTOP-4JPUDVN:~/files_to_delete$ touch file2.txt
+syimykr@DESKTOP-4JPUDVN:~/files_to_delete$ echo "not empty" > file2.txt
+syimykr@DESKTOP-4JPUDVN:~/files_to_delete$ cd ..
+syimykr@DESKTOP-4JPUDVN:~$ chmod +x delete_empty_files.sh
+syimykr@DESKTOP-4JPUDVN:~$ ./delete_empty_files.sh files_to_delete/
+Searching for empty files in 'files_to_delete/'...
+files_to_delete/file1.txt
+Empty files (if any) have been deleted.
+syimykr@DESKTOP-4JPUDVN:~$
