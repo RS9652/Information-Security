@@ -1,0 +1,185 @@
+syimykr@DESKTOP-4JPUDVN:~$ mkdir phishing
+syimykr@DESKTOP-4JPUDVN:~$ cd phishing/
+syimykr@DESKTOP-4JPUDVN:~/phishing$ touch fake_login.html
+syimykr@DESKTOP-4JPUDVN:~/phishing$ nano fake_login.html
+syimykr@DESKTOP-4JPUDVN:~/phishing$ nano fake_login.html
+syimykr@DESKTOP-4JPUDVN:~/phishing$ cd ..
+syimykr@DESKTOP-4JPUDVN:~$ pip install Flask
+Command 'pip' not found, did you mean:
+  command 'wip' from snap wip (1.5.0)
+  command 'pic' from deb groff-base (1.23.0-3)
+  command 'php' from deb php8.3-cli (8.3.6-0ubuntu0.24.04.3)
+  command 'php' from deb php-cli (2:8.2+93ubuntu1)
+  command 'php' from deb php8.2-cli (8.2.12-1ubuntu2)
+  command 'ip' from deb iproute2 (6.1.0-1ubuntu2)
+  command 'zip' from deb zip (3.0-13ubuntu0.2)
+See 'snap info <snapname>' for additional versions.
+syimykr@DESKTOP-4JPUDVN:~$ sudo pip install Flask
+[sudo] password for syimykr:
+Sorry, try again.
+[sudo] password for syimykr:
+sudo: pip: command not found
+syimykr@DESKTOP-4JPUDVN:~$ sudo apt update
+Hit:1 http://archive.ubuntu.com/ubuntu noble InRelease
+Get:2 http://archive.ubuntu.com/ubuntu noble-updates InRelease [126 kB]
+Get:3 http://security.ubuntu.com/ubuntu noble-security InRelease [126 kB]
+Get:4 http://archive.ubuntu.com/ubuntu noble-backports InRelease [126 kB]...
+syimykr@DESKTOP-4JPUDVN:~$ python3 --version
+Python 3.12.3
+syimykr@DESKTOP-4JPUDVN:~$ pip3 --version
+Command 'pip3' not found, but can be installed with:
+sudo apt install python3-pip
+syimykr@DESKTOP-4JPUDVN:~$ sudo apt install python3 python3-pip -y
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+python3 is already the newest version (3.12.3-0ubuntu2).
+python3 set to manually installed.
+The following additional packages will be installed:
+  build-essential bzip2 cpp cpp-13 cpp-13-x86-64-linux-gnu cpp-x86-64-linux-gnu dpkg dpkg-dev
+  fakeroot g++ g++-13 g++-13-x86-64-linux-gnu g++-x86-64-linux-gnu gcc gcc-13 gcc-13-base
+syimykr@DESKTOP-4JPUDVN:~$
+syimykr@DESKTOP-4JPUDVN:~$ pip3 --version
+pip 24.0 from /usr/lib/python3/dist-packages/pip (python 3.12)
+syimykr@DESKTOP-4JPUDVN:~$ pip install Flask
+error: externally-managed-environment
+
+× This environment is externally managed
+╰─> To install Python packages system-wide, try apt install
+    python3-xyz, where xyz is the package you are trying to
+    install.
+
+    If you wish to install a non-Debian-packaged Python package,
+    create a virtual environment using python3 -m venv path/to/venv.
+    Then use path/to/venv/bin/python and path/to/venv/bin/pip. Make
+    sure you have python3-full installed.
+
+    If you wish to install a non-Debian packaged Python application,
+    it may be easiest to use pipx install xyz, which will manage a
+    virtual environment for you. Make sure you have pipx installed.
+
+    See /usr/share/doc/python3.12/README.venv for more information.
+
+note: If you believe this is a mistake, please contact your Python installation or OS distribution provider. You can override this, at the risk of breaking your Python installation or OS, by passing --break-system-packages.
+hint: See PEP 668 for the detailed specification.
+syimykr@DESKTOP-4JPUDVN:~$ sudo apt install python3-venv -y
+ myenv
+source myenv/bin/activate
+python3 -m venv myenv
+source myenv/bin/activate
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following additional packages will be installed:
+  python3-pip-whl python3-setuptools-whl python3.12-venv
+The following NEW packages will be installed:
+  python3-pip-whl python3-setuptools-whl python3-venv python3.12-venv
+0 upgraded, 4 newly installed, 0 to remove and 44 not upgraded.
+Need to get 2430 kB of archives.
+After this operation, 2783 kB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu noble-updates/universe amd64 python3-pip-whl all 24.0+dfsg-1ubuntu1.3 [1707 kB]
+Get:2 http://archive.ubuntu.com/ubuntu noble-updates/universe amd64 python3-setuptools-whl all 68.1.2-2ubuntu1.2 [716 kB]
+Get:3 http://archive.ubuntu.com/ubuntu noble-updates/universe amd64 python3.12-venv amd64 3.12.3-1ubuntu0.8 [5678 B]
+Get:4 http://archive.ubuntu.com/ubuntu noble-updates/universe amd64 python3-venv amd64 3.12.3-0ubuntu2 [1034 B]
+Fetched 2430 kB in 5s (536 kB/s)
+Selecting previously unselected package python3-pip-whl.
+(Reading database ... 47755 files and directories currently installed.)
+Preparing to unpack .../python3-pip-whl_24.0+dfsg-1ubuntu1.3_all.deb ...
+Unpacking python3-pip-whl (24.0+dfsg-1ubuntu1.3) ...
+Selecting previously unselected package python3-setuptools-whl.
+Preparing to unpack .../python3-setuptools-whl_68.1.2-2ubuntu1.2_all.deb ...
+Unpacking python3-setuptools-whl (68.1.2-2ubuntu1.2) ...
+Selecting previously unselected package python3.12-venv.
+Preparing to unpack .../python3.12-venv_3.12.3-1ubuntu0.8_amd64.deb ...
+Unpacking python3.12-venv (3.12.3-1ubuntu0.8) ...
+Selecting previously unselected package python3-venv.
+Preparing to unpack .../python3-venv_3.12.3-0ubuntu2_amd64.deb ...
+Unpacking python3-venv (3.12.3-0ubuntu2) ...
+Setting up python3-setuptools-whl (68.1.2-2ubuntu1.2) ...
+Setting up python3-pip-whl (24.0+dfsg-1ubuntu1.3) ...
+Setting up python3.12-venv (3.12.3-1ubuntu0.8) ...
+Setting up python3-venv (3.12.3-0ubuntu2) ...
+syimykr@DESKTOP-4JPUDVN:~$ python3 -m venv myenv
+syimykr@DESKTOP-4JPUDVN:~$ source myenv/bin/activate
+(myenv) syimykr@DESKTOP-4JPUDVN:~$ pip install Flask
+Collecting Flask
+  Downloading flask-3.1.2-py3-none-any.whl.metadata (3.2 kB)
+Collecting blinker>=1.9.0 (from Flask)
+  Downloading blinker-1.9.0-py3-none-any.whl.metadata (1.6 kB)
+Collecting click>=8.1.3 (from Flask)
+  Downloading click-8.3.0-py3-none-any.whl.metadata (2.6 kB)
+Collecting itsdangerous>=2.2.0 (from Flask)
+  Downloading itsdangerous-2.2.0-py3-none-any.whl.metadata (1.9 kB)
+Collecting jinja2>=3.1.2 (from Flask)
+  Downloading jinja2-3.1.6-py3-none-any.whl.metadata (2.9 kB)
+Collecting markupsafe>=2.1.1 (from Flask)
+  Downloading markupsafe-3.0.3-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.7 kB)
+Collecting werkzeug>=3.1.0 (from Flask)
+  Downloading werkzeug-3.1.3-py3-none-any.whl.metadata (3.7 kB)
+Downloading flask-3.1.2-py3-none-any.whl (103 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 103.3/103.3 kB 461.6 kB/s eta 0:00:00
+Downloading blinker-1.9.0-py3-none-any.whl (8.5 kB)
+Downloading click-8.3.0-py3-none-any.whl (107 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 107.3/107.3 kB 585.9 kB/s eta 0:00:00
+Downloading itsdangerous-2.2.0-py3-none-any.whl (16 kB)
+Downloading jinja2-3.1.6-py3-none-any.whl (134 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 134.9/134.9 kB 898.8 kB/s eta 0:00:00
+Downloading markupsafe-3.0.3-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (22 kB)
+Downloading werkzeug-3.1.3-py3-none-any.whl (224 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 224.5/224.5 kB 253.3 kB/s eta 0:00:00
+Installing collected packages: markupsafe, itsdangerous, click, blinker, werkzeug, jinja2, Flask
+Successfully installed Flask-3.1.2 blinker-1.9.0 click-8.3.0 itsdangerous-2.2.0 jinja2-3.1.6 markupsafe-3.0.3 werkzeug-3.1.3
+(myenv) syimykr@DESKTOP-4JPUDVN:~$ nano server.py
+(myenv) syimykr@DESKTOP-4JPUDVN:~$ python server.py
+Traceback (most recent call last):
+  File "/home/syimykr/server.py", line 2, in <module>
+    from flask_cors import CORS
+ModuleNotFoundError: No module named 'flask_cors'
+(myenv) syimykr@DESKTOP-4JPUDVN:~$ nano server.py
+(myenv) syimykr@DESKTOP-4JPUDVN:~$ pip install flask_cors
+Collecting flask_cors
+  Downloading flask_cors-6.0.1-py3-none-any.whl.metadata (5.3 kB)
+Requirement already satisfied: flask>=0.9 in ./myenv/lib/python3.12/site-packages (from flask_cors) (3.1.2)
+Requirement already satisfied: Werkzeug>=0.7 in ./myenv/lib/python3.12/site-packages (from flask_cors) (3.1.3)
+Requirement already satisfied: blinker>=1.9.0 in ./myenv/lib/python3.12/site-packages (from flask>=0.9->flask_cors) (1.9.0)
+Requirement already satisfied: click>=8.1.3 in ./myenv/lib/python3.12/site-packages (from flask>=0.9->flask_cors) (8.3.0)
+Requirement already satisfied: itsdangerous>=2.2.0 in ./myenv/lib/python3.12/site-packages (from flask>=0.9->flask_cors) (2.2.0)
+Requirement already satisfied: jinja2>=3.1.2 in ./myenv/lib/python3.12/site-packages (from flask>=0.9->flask_cors) (3.1.6)
+Requirement already satisfied: markupsafe>=2.1.1 in ./myenv/lib/python3.12/site-packages (from flask>=0.9->flask_cors) (3.0.3)
+Downloading flask_cors-6.0.1-py3-none-any.whl (13 kB)
+Installing collected packages: flask_cors
+Successfully installed flask_cors-6.0.1
+(myenv) syimykr@DESKTOP-4JPUDVN:~$ python server.py
+ * Serving Flask app 'server'
+ * Debug mode: on
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on http://127.0.0.1:8000
+Press CTRL+C to quit
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 101-039-069
+127.0.0.1 - - [13/Oct/2025 16:15:40] "GET / HTTP/1.1" 404 -
+127.0.0.1 - - [13/Oct/2025 16:15:40] "GET /favicon.ico HTTP/1.1" 404 -
+^C(myenv) syimykr@DESKTOP-4JPUDVN:~$ nano mail.py
+(myenv) syimykr@DESKTOP-4JPUDVN:~$ python mail.py
+Error sending email: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials 2adb3069b0e04-5908856381dsm4009612e87.80 - gsmtp')
+(myenv) syimykr@DESKTOP-4JPUDVN:~$ nano mail.py
+(myenv) syimykr@DESKTOP-4JPUDVN:~$ nano mail.py
+(myenv) syimykr@DESKTOP-4JPUDVN:~$ find /home -name fake_login.html
+/home/syimykr/phishing/fake_login.html
+(myenv) syimykr@DESKTOP-4JPUDVN:~$ nano mail.py
+(myenv) syimykr@DESKTOP-4JPUDVN:~$ nano mail.py
+(myenv) syimykr@DESKTOP-4JPUDVN:~$ python mail.py
+Error sending email: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials d9443c01a7336-29034de9febsm132953295ad.7 - gsmtp')
+(myenv) syimykr@DESKTOP-4JPUDVN:~$ deacivate
+deacivate: command not found
+(myenv) syimykr@DESKTOP-4JPUDVN:~$ deactivate
+syimykr@DESKTOP-4JPUDVN:~$ ls
+another_dir  count_words.sh   delete_empty_files.sh  dir2             greet.sh        mail.py  myenv     savedjson.json  system_info  word_file.txt
+check_old    current_time.sh  dir1                   files_to_delete  login_data.txt  my_dir   phishing  server.py       toy_shell
+syimykr@DESKTOP-4JPUDVN:~$ cd myenv
+syimykr@DESKTOP-4JPUDVN:~/myenv$ cd ..
+syimykr@DESKTOP-4JPUDVN:~$ python3 -m venv myenv
+syimykr@DESKTOP-4JPUDVN:~$ source myenv/bin/activate
+(myenv) syimykr@DESKTOP-4JPUDVN:~$ deactivate
+syimykr@DESKTOP-4JPUDVN:~$
