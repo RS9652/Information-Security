@@ -1,0 +1,91 @@
+syimykr@DESKTOP-4JPUDVN:~$ cd lab05/
+syimykr@DESKTOP-4JPUDVN:~/lab05$ chmod 754 permission_file.txt
+syimykr@DESKTOP-4JPUDVN:~/lab05$ ls-la
+ls-la: command not found
+syimykr@DESKTOP-4JPUDVN:~/lab05$ ls -la
+total 8
+drwxr-xr-x  2 syimykr syimykr 4096 Oct 14 15:09 .
+drwxr-x--- 15 syimykr syimykr 4096 Oct 14 15:08 ..
+-rwxr-xr--  1 syimykr syimykr    0 Oct 14 15:09 permission_file.txt
+syimykr@DESKTOP-4JPUDVN:~/lab05$ cat /etc/passwd
+...
+polkitd:x:990:990:User for polkitd:/:/usr/sbin/nologin
+syimykr:x:1000:1000:,,,:/home/syimykr:/bin/bash
+syimykr@DESKTOP-4JPUDVN:~/lab05$ sudo adduser user1
+[sudo] password for syimykr:
+info: Adding user `user1' ...
+info: Selecting UID/GID from range 1000 to 59999 ...
+info: Adding new group `user1' (1002) ...
+info: Adding new user `user1' (1002) with group `user1 (1002)' ...
+info: Creating home directory `/home/user1' ...
+info: Copying files from `/etc/skel' ...
+New password:
+Retype new password:
+passwd: password updated successfully
+Changing the user information for user1
+Enter the new value, or press ENTER for the default
+        Full Name []: user
+        Room Number []: 1
+        Work Phone []: 1
+        Home Phone []: 1
+        Other []: 1
+Is the information correct? [Y/n] y
+info: Adding new user `user1' to supplemental / extra groups `users' ...
+info: Adding user `user1' to group `users' ...
+syimykr@DESKTOP-4JPUDVN:~/lab05$ su - user1
+Password:
+Welcome to Ubuntu 24.04.3 LTS (GNU/Linux 6.6.87.2-microsoft-standard-WSL2 x86_64)
+user1@DESKTOP-4JPUDVN:~$ exit
+logout
+syimykr@DESKTOP-4JPUDVN:~/lab05$ su - user1
+Password:
+user1@DESKTOP-4JPUDVN:~$ su - syimykr
+Password:
+syimykr@DESKTOP-4JPUDVN:~$ cd lab05/
+syimykr@DESKTOP-4JPUDVN:~/lab05$ ls -l permission_file.txt
+-rwxr-xr-- 1 syimykr syimykr 0 Oct 14 15:09 permission_file.txt
+syimykr@DESKTOP-4JPUDVN:~/lab05$ sudo usermod -aG syimykr user1
+syimykr@DESKTOP-4JPUDVN:~/lab05$ su - user1
+Password:
+user1@DESKTOP-4JPUDVN:~$ cd lab05
+-bash: cd: lab05: No such file or directory
+user1@DESKTOP-4JPUDVN:~$ ls
+user1@DESKTOP-4JPUDVN:~$ l
+user1@DESKTOP-4JPUDVN:~$ mkdir some
+user1@DESKTOP-4JPUDVN:~$ cd some/
+user1@DESKTOP-4JPUDVN:~/some$ cd ..
+user1@DESKTOP-4JPUDVN:~$ ls
+some
+user1@DESKTOP-4JPUDVN:~$ rm some
+rm: cannot remove 'some': Is a directory
+user1@DESKTOP-4JPUDVN:~$ rmdir some
+user1@DESKTOP-4JPUDVN:~$ ls
+user1@DESKTOP-4JPUDVN:~$ su - syimykr
+Password:
+syimykr@DESKTOP-4JPUDVN:~$ cd la
+-bash: cd: la: No such file or directory
+syimykr@DESKTOP-4JPUDVN:~$ cd lab05/
+syimykr@DESKTOP-4JPUDVN:~/lab05$ chmod 664 permission_file.txt
+syimykr@DESKTOP-4JPUDVN:~/lab05$ su - user1
+Password:
+user1@DESKTOP-4JPUDVN:~$ ls
+user1@DESKTOP-4JPUDVN:~$ su - syimykr
+Password:
+syimykr@DESKTOP-4JPUDVN:~$ cd lab05/
+syimykr@DESKTOP-4JPUDVN:~/lab05$ sudo chown user1 permission_file.txt
+syimykr@DESKTOP-4JPUDVN:~/lab05$ su - user1
+Password:
+user1@DESKTOP-4JPUDVN:~$ ls
+user1@DESKTOP-4JPUDVN:~$ su - syimykr
+Password:
+syimykr@DESKTOP-4JPUDVN:~$ cd lab05/
+syimykr@DESKTOP-4JPUDVN:~/lab05$ echo permission_file.txt > "Hello, there!"
+syimykr@DESKTOP-4JPUDVN:~/lab05$ cat permission_file.txt
+syimykr@DESKTOP-4JPUDVN:~/lab05$ echo "Hello,there!" > permission_file.txt
+syimykr@DESKTOP-4JPUDVN:~/lab05$ cat permission_file.txt
+Hello,there!
+syimykr@DESKTOP-4JPUDVN:~/lab05$ nano permission_file.txt
+syimykr@DESKTOP-4JPUDVN:~/lab05$ nano permission_file.txt
+syimykr@DESKTOP-4JPUDVN:~/lab05$ cat permission_file.txt
+Hello,there! How are you doing?
+syimykr@DESKTOP-4JPUDVN:~/lab05$
