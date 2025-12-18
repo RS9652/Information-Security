@@ -6,9 +6,9 @@ from email.mime.multipart import MIMEMultipart
 # Email server details (for example, Gmail's SMTP)
 smtp_server = "smtp.gmail.com"
 smtp_port = 587
-sender_email = "simarasul04@gmail.com"  # Replace with your email address
+sender_email = ""  # Replace with your email address
 sender_password = "Your_password"     # Replace with your email password or app-specific password
-receiver_email = "rasulov_sy@auca.kg"  # Replace with the recipient's email
+receiver_email = ""  # Replace with the recipient's email
 
 
 
